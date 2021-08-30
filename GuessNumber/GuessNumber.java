@@ -6,6 +6,7 @@ public class GuessNumber{
 	public GuessNumber(){
 		totalGuesses=1;
 		randomNumber=(int)(Math.random()*100)+1;
+		System.out.println(randomNumber);
 	}
 	//set
 	public void setUserGuess(int userGuess){
@@ -14,10 +15,15 @@ public class GuessNumber{
 	//compute
 	public void compareNumbers(){
 		if(userGuess==randomNumber){
-			msg="Congratulations, you guessed the number";
+			if(totalGuesses==1){
+				msg="Congratulations, you guessed the number \nYou guessed the correct number the first time";
+			}
+			else if(totalGuesses>1){
+				msg="Congratulations, you guessed the number \nYou guessed the correct number in "+totalGuesses+" tries";
+			}
 		}
 		else if(userGuess>randomNumber){
-			msg="Your number is too heigh";
+			msg="Your number is too high";
 			totalGuesses++;
 		}
 		else if(userGuess<randomNumber){
@@ -26,6 +32,9 @@ public class GuessNumber{
 		}
 	}
 	//get
+	public int getRandomNumber(){
+		return randomNumber;
+	}
 	public String getMsg(){
 		return msg;
 	}
