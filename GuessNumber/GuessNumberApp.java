@@ -8,18 +8,18 @@ public class GuessNumberApp{
 		GuessNumber gn=new GuessNumber();
 		do{
 
-		//input
-		userGuess=Integer.parseInt(JOptionPane.showInputDialog(null,"Enter number 1-100"));
-		//set
-		gn.setUserGuess(userGuess);
-		//compute
-		gn.compareNumbers();
-		//get
-		randomNumber=gn.getRandomNumber();
-		msg=gn.getMsg();
-		totalGuesses=gn.getTotalGuesses();
-		//output
-		JOptionPane.showMessageDialog(null, msg);
+			//input
+			userGuess=Integer.parseInt(JOptionPane.showInputDialog(null,"Enter number 1-100"));
+			//set
+			gn.setUserGuess(userGuess);
+			//compute
+			gn.compareNumbers();
+			//get
+			randomNumber=gn.getRandomNumber();
+			msg=gn.getMsg();
+			totalGuesses=gn.getTotalGuesses();
+			//output
+			JOptionPane.showMessageDialog(null, msg);
 
 		}while (userGuess!=randomNumber);
 	}

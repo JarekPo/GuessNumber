@@ -6,6 +6,7 @@ public class GuessNumber{
 	public GuessNumber(){
 		totalGuesses=1;
 		randomNumber=(int)(Math.random()*100)+1;
+		//Print the random number for testing purposes
 		System.out.println(randomNumber);
 	}
 	//set
